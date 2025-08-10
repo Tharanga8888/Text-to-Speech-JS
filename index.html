@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Text-to-Speech App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container" role="main" aria-label="Text to Speech Application">
+    <h1>Text-to-Speech App</h1>
+
+    <label for="textInput" class="sr-only">Enter text to read aloud</label>
+    <textarea id="textInput" rows="6" placeholder="Enter text to read aloud..."></textarea>
+
+    <div class="controls">
+      <label for="voiceSelect">Voice:</label>
+      <select id="voiceSelect" aria-label="Select voice"></select>
+    </div>
+
+    <div class="controls">
+      <label for="rate">Rate: <span id="rateValue">1</span></label>
+      <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" />
+    </div>
+
+    <div class="controls">
+      <label for="pitch">Pitch: <span id="pitchValue">1</span></label>
+      <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" />
+    </div>
+
+    <div class="buttons">
+      <button id="speakBtn">Speak</button>
+      <button id="pauseBtn" disabled>Pause</button>
+      <button id="resumeBtn" disabled>Resume</button>
+      <button id="cancelBtn" disabled>Cancel</button>
+    </div>
+
+    <p id="message" role="alert" aria-live="assertive"></p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
